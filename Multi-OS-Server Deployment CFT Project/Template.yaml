@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Launch Multiple EC2 Instances with different operating systems
+Resources:
+  WindowsServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: <enter windows ami>
+      KeyName: <enter key name>
+  UbuntuServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: <enter ubuntu ami>
+      KeyName: <enter key name>
+  AmazonLinuxServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: <enter amazon linux ami>
+      KeyName: <enter key name>
